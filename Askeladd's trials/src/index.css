@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Uncial+Antiqua&display=swap');
+
+body {
+font-family: 'Cinzel', serif; /* Main font for the Viking theme */
+}
+
+.font-serif {
+font-family: 'Uncial Antiqua', cursive; /* For special headings */
+}
+
+/* 3D card flip effects - this took forever to get right */
+.transform-style-preserve-3d {
+transform-style: preserve-3d;
+}
+
+.backface-hidden {
+backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+transform: rotateY(180deg);
+}
+
+/* Floating animation for atmospheric elements */
+@keyframes float {
+0%, 100% { transform: translateY(0px); }
+50% { transform: translateY(-10px); }
+}
+
+.animate-float {
+animation: float 3s ease-in-out infinite;
+}
